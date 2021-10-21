@@ -7,4 +7,4 @@
 import * as vscode from 'vscode';
 import * as nls from 'vscode-nls';
 
-export const localize = nls.config(process.env.VSCODE_NLS_CONFIG)();
+export const localize = nls.config(process.env.VSCODE_NLS_CONFIG as nls.Options | undefined)();

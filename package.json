@@ -1,19 +1,18 @@
 {
-	"name": "lrdb",
-	"displayName": "LRDB",
-	"description": "Lua Remote DeBugger",
-	"version": "0.3.4",
+	"name": "lrdb-dse",
+	"displayName": "LRDB-DSE",
+	"description": "Lua Remote DeBugger for DSE",
+	"version": "0.1.0",
 	"publisher": "satoren",
 	"engines": {
-		"vscode": "^1.17.0",
-		"node": "^7.4.0"
+		"vscode": "^1.52.0"
 	},
 	"categories": [
 		"Debuggers"
 	],
 	"dependencies": {
-		"vscode-debugadapter": "1.24.0",
-		"vscode-nls": "2.0.2"
+		"vscode-debugadapter": "^1.43.0",
+		"vscode-nls": "^5.0.0"
 	},
 	"activationEvents": [
 		"onDebug"
@@ -33,15 +32,15 @@
 		"test": "node ./node_modules/mocha/bin/mocha -u tdd ./out/test/"
 	},
 	"devDependencies": {
-		"typescript": "2.5.2",
-		"vscode": "1.1.10",
-		"vscode-nls-dev": "2.1.5",
-		"vscode-debugadapter-testsupport": "^1.24.0",
-		"vscode-debugprotocol": "1.24.0",
+		"typescript": "^4.4.4",
+		"@types/vscode": "^1.52.0",
+		"vscode-nls-dev": "^3.3.2",
+		"vscode-debugadapter-testsupport": "^1.49.0",
+		"vscode-debugprotocol": "^1.43.0",
 		"mocha": "3.5.0",
 		"@types/mocha": "2.2.42",
-		"@types/node": "6.0.52",
-		"vsce": "1.32.0"
+		"@types/node": "^6.14.13",
+		"vsce": "^1.100.1"
 	},
 	"icon": "images/icon.png",
 	"license": "BSL-1.0",

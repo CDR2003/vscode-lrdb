@@ -737,7 +737,8 @@ export class LuaDebugSession extends DebugSession {
 
 	private handleServerEvents(event: DebugServerEvent) {
 		if (event.method == "paused" && event.params.reason != "entry") {
-			this.sendEvent(new StoppedEvent(event.params.reason, LuaDebugSession.THREAD_ID));
+			let stoppedEvent = new StoppedEvent(event.params.reason, LuaDebugSession.THREAD_ID, event.params.description);
+			this.sendEvent(stoppedEvent);
 		}
 		else if (event.method == "running") {
 			this._variableHandles.reset();
